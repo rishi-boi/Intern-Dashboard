@@ -18,7 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
-
+  
 const leaderboard = [
   { id: 1, name: "Riya Sharma", referralCode: "riya2025", donations: 8500 },
   { id: 2, name: "Aryan Desai", referralCode: "aryan2025", donations: 7200 },
