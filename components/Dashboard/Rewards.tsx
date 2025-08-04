@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Gift, Lock, Medal, Trophy, Unlock } from "lucide-react";
+import {  Lock, Trophy, Unlock } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -9,36 +9,7 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import { cn } from "@/lib/utils";
-const rewards = [
-  {
-    id: 1,
-    title: "Bronze Badge",
-    description: "Congrats🎉! for raising ₹1000",
-    unlocked: true,
-    icon: <Medal size={40} className="text-yellow-600" />,
-  },
-  {
-    id: 2,
-    title: "Silver Badge",
-    description: "Congrats🎉! for raising ₹5000",
-    unlocked: false,
-    icon: <Medal size={40} className="text-gray-400" />,
-  },
-  {
-    id: 3,
-    title: "Early Bird Reward",
-    description: "For being an early supporter",
-    unlocked: true,
-    icon: <Gift size={40} className="text-pink-500" />,
-  },
-  {
-    id: 4,
-    title: "Top 10 Leaderboard",
-    description: "For being in the top 10 fundraisers",
-    unlocked: false,
-    icon: <Trophy size={40} className="text-orange-400" />,
-  },
-];
+import { rewards } from "@/constants";
 
 const Rewards = ({ className }: { className?: string }) => {
   return (
@@ -79,7 +50,7 @@ const Rewards = ({ className }: { className?: string }) => {
                       !reward.unlocked && "blur-xs"
                     )}
                   >
-                    {reward.icon}
+                    <reward.icon className={reward.color} />
                     <p className="text-sm font-medium text-center line-clamp-1">
                       {reward.title}
                     </p>

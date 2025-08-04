@@ -10,32 +10,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { NumberTicker } from "@/components/magicui/number-ticker";
-import { ArrowRight, ArrowUp, ChartLine, Copy, Landmark } from "lucide-react";
-import Link from "next/link";
+import {ChartLine } from "lucide-react";
 import { useSidebar } from "../ui/sidebar";
 import { cn } from "@/lib/utils";
+import { chartConfig, donationData } from "@/constants";
 
-const donationData = [
-  { date: "Jul 28", amount: 500 },
-  { date: "Jul 29", amount: 800 },
-  { date: "Jul 30", amount: 900 },
-  { date: "Jul 31", amount: 1200 },
-  { date: "Aug 01", amount: 2000 },
-  { date: "Aug 02", amount: 2500 },
-  { date: "Aug 03", amount: 3000 },
-];
-const chartConfig = {
-  amount: {
-    color: "var(--color-desktop)",
-    label: "Amount",
-  },
-};
+
 
 export default function DonationTrendChart({
   className,

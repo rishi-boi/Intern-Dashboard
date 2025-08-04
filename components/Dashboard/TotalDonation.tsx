@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { NumberTicker } from "@/components/magicui/number-ticker";
-import { ArrowRight, ArrowUp, Copy, Landmark } from "lucide-react";
+import { ArrowRight, ArrowUp, Landmark } from "lucide-react";
 import Link from "next/link";
 
 const TotalDonation = ({ className }: { className?: string }) => {

@@ -12,8 +12,9 @@ import {
 } from "./ui/sidebar";
 import Link from "next/link";
 import { LogOut, SlidersHorizontal } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const NavSideBar = () => {
+const NavSideBar = ({ pathName }: { pathName: string }) => {
   return (
     <Sidebar className="rounded-md" variant="sidebar" collapsible="icon">
       <SidebarContent>
@@ -28,7 +29,10 @@ const NavSideBar = () => {
                 <SidebarMenuItem key={index}>
                   <SidebarMenuButton
                     asChild
-                    className="hover:bg-primary/20 transition-all"
+                    className={cn(
+                      "hover:bg-primary/20 transition-all",
+                      pathName === item.url ? "bg-primary/10 " : ""
+                    )}
                   >
                     <Link href={item.url}>
                       <item.icon />

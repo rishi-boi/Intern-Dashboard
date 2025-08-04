@@ -18,19 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
-  
-const leaderboard = [
-  { id: 1, name: "Riya Sharma", referralCode: "riya2025", donations: 8500 },
-  { id: 2, name: "Aryan Desai", referralCode: "aryan2025", donations: 7200 },
-  { id: 3, name: "Meera Jain", referralCode: "meera2025", donations: 6900 },
-  { id: 4, name: "Kunal Singh", referralCode: "kunal2025", donations: 6100 },
-  { id: 5, name: "Sana Patel", referralCode: "sana2025", donations: 5400 },
-  { id: 6, name: "Riya Sharma", referralCode: "riya2025", donations: 8500 },
-  { id: 7, name: "Aryan Desai", referralCode: "aryan2025", donations: 7200 },
-  { id: 8, name: "Meera Jain", referralCode: "meera2025", donations: 6900 },
-  { id: 9, name: "Kunal Singh", referralCode: "kunal2025", donations: 6100 },
-  { id: 10, name: "Sana Patel", referralCode: "sana2025", donations: 5400 },
-];
+import { leaderboard } from "@/constants";
 
 const LeaderBoard = ({ className }: { className?: string }) => {
   return (
@@ -46,7 +34,7 @@ const LeaderBoard = ({ className }: { className?: string }) => {
         <Table>
           <TableCaption className="text-right">
             <Link
-              href="/"
+              href="/leaderboard"
               className="flex gap-2 items-center justify-end hover:underline underline-offset-4 transition-all"
             >
               See full leaderboard <ArrowRight size={18} />
