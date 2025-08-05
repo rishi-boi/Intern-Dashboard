@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <h1 className="font-inter text-primary">Hello World</h1>;
+  return <div>Hello World</div>;
 };
 
 export default page;
